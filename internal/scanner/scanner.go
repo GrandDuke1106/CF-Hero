@@ -667,7 +667,7 @@ func (s *Scanner) zoomeyeSearch(domain, url string, cfIP net.IP, actualHTMLTitle
 			return
 		}
 
-		zoomeyeURL := "https://api.zoomeye.ai/v2/search"
+		zoomeyeURL := "https://api.zoomeye.org/v2/search"
 		client := httpClient.NewHTTPClient(s.Options.Proxy, url)
 
 		req, err := http.NewRequest("POST", zoomeyeURL, strings.NewReader(string(jsonBody)))
